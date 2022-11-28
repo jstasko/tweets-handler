@@ -1,0 +1,1907 @@
+2022-10-25 07:05:07 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 99669 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-25 07:05:07 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-25 07:05:08 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.788 seconds (JVM running for 1.306)
+2022-10-25 07:05:08 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-25 07:05:08 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:05:08 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-25 07:05:08 [main] INFO  s.s.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:08:02 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 99886 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-25 07:08:02 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-25 07:08:02 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.32 seconds (JVM running for 0.809)
+2022-10-25 07:08:02 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-25 07:08:02 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:08:02 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-25 07:08:02 [main] INFO  s.s.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:09 UTC 2022","id":"1584773789447254016","text":"【グッズ予約情報】「あんさんぶるスターズ」の『イベコレ缶バッジ［2022 SPRING］ -Idol Side-』が2023年1月8日発売予定ウナ✨現在店頭予約受付中♪ #あんスタ
+▼バーコード簡単予約がオススメ！
+画像タップ→レジでバーコード表示を見せてね
+https://t.co/rieujTCYh1","user":{"id":"385791355"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:09 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:09 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:09 UTC 2022","id":"1584773789061111811","text":"https://t.co/TJ6SAPzBO9
+We use BPMN and Camunda (or Bonitasoft) together with Java and REST. This combination provides the exact architecture that you need to build low-code, reliable and easily maintainable workflow applications in a cost effective manner.
+#UiPath
+#SmallBusiness https://t.co/9bHKsmnOlv","user":{"id":"1505615658217717762"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:09 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:09 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:11 UTC 2022","id":"1584773795717713920","text":"RT @tokotrade: 【交換 譲渡】あんスタ フィーチャー 2022 spring [Idolのみ]
+
+譲:薫 嵐 敬人 なずな 泉 真緒 凪砂 つむぎ
+
+求:英智
+☆4無印...定価(+送料)
+☆4🔴...各250円(+送料)
+
+※薫のみの交換は決まっておりますので、…","user":{"id":"703606860473995264"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:11 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:11 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:11 UTC 2022","id":"1584773797785133056","text":"RT @QINGORACLE: “Changes”, feeling blessed, sudden opportunities, “spring”, waking up before alarm clock, seeing fish, “keys”, studying har…","user":{"id":"1242173261921882114"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:11 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:11 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:12 UTC 2022","id":"1584773800717000705","text":"RT @pmakela1: On a side note, didn't Russia loot material from Chernobyl in the spring? 
+They might be planning to use some of that to attr…","user":{"id":"700421115726929921"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:12 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:12 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:11 UTC 2022","id":"1584773797474729984","text":"What will do if Google is down?🤔
+
+#100daysofcode #DEVCommunity #WebDev #WebDevelopment #JavaScript #CSS #React #HTML #Resources #programming #GumRoad #coding #NextJS #programmer #coder #Python #Java","user":{"id":"880023675293925377"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:11 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:11 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:13 UTC 2022","id":"1584773805616300032","text":"RT @tokotrade: 【交換 譲渡】あんスタ テーマ スカウト 2022 Spring (2021 winter) Idol Casual
+
+譲:巽 斑 奏汰 桃李 日和 翠
+渉 斑 レオ 燐音 スバル
+
+求:HiMERU
+🔴のみ…各400円(+送料)
+
+☆4のみ→同数…","user":{"id":"703606860473995264"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:13 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:13 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:16 UTC 2022","id":"1584773818811547649","text":"RT @NancySparks3: Cardinal Spring Woods Mug https://t.co/AQZFJI3uX4 via @zazzle #zazzle #zazzlemade #coffeemug #mug #bird #redbird #cardina…","user":{"id":"1831919268"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:16 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:16 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:17 UTC 2022","id":"1584773821202333696","text":"The bottom two and elimination on #HalloweenBakingChampionship this week was shocking. Licorice should be banned from all following competitions (they made Romy use it in the Spring, too!). @DescherKristi, you were absolutely *superb*. Still a winner to me!","user":{"id":"16701886"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:17 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:17 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:17 UTC 2022","id":"1584773821084487681","text":"RT @surajondev: What will do if Google is down?🤔
+
+#100daysofcode #DEVCommunity #WebDev #WebDevelopment #JavaScript #CSS #React #HTML #Resou…","user":{"id":"411419084"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:17 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:17 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:19 UTC 2022","id":"1584773830265827328","text":"RT @teamrosepark: the way ROSÉ's can pull off a different vibe when wearing YSL tuxedo suit! 🔥
+
+* @YSL spring/summer 2023 Menswear collecti…","user":{"id":"1311991549987827712"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:19 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:19 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:24 UTC 2022","id":"1584773851334184960","text":"RT @NamiNami_ARMY: 今日のAMA投票動画
+過去作成動画
+
+2017 KBS歌謡大祝祭の\"Spring Day\"
+
+ラストで今までの曲のダンスミックスを披露
+感動のダンス原曲を重ねてみた
+
+RTでも1票🗳
+@BTS_twt BTS as Favorite Pop…","user":{"id":"977526996"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:24 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:24 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:08:31 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:08:25 UTC 2022","id":"1584773855830507520","text":"RT @shannsational: Got7 fanboy rode on his motorbike for 2 1/2 hours from West Java to Jakarta to watch JayB - got high fived and vowed to…","user":{"id":"1584770645526970368"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:08:25 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:08:25 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:11:01 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 157 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-25 07:11:01 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-25 07:11:01 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.503 seconds (JVM running for 0.928)
+2022-10-25 07:11:01 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-25 07:11:01 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:11:01 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-25 07:11:01 [main] INFO  s.s.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:12:01 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:11:04 UTC 2022","id":"1584774522095382528","text":"RT @careertuner: 5 Useful Node.js Tools...
+To make you a better developer...
+
+#js #careertuner #nodejs #expressjs #java #programming #codin…","user":{"id":"787380362825633792"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:11:04 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:11:04 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:12:01 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:11:06 UTC 2022","id":"1584774529100009472","text":"11/22
+SPRiNG(スプリング) 2023年 1月号
+
+🖤表紙
+🖤目黒蓮
+
+▶︎https://t.co/pUvg8rc1sv
+
+めめ表紙🖤
+
+✔︎︎︎︎特集12P
+✔︎︎︎︎デート気分が味わえるフォトコレクション
+
+#目黒蓮
+S028","user":{"id":"1267132569583095808"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:11:06 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:11:06 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:12:01 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:11:07 UTC 2022","id":"1584774533608710144","text":"RT @torihiki_date: @0
+【交換/譲渡】
+羽多野渉・佐藤拓也のScat Babys Show！！ SBS セガラッキーくじ
+Spring Summer Autumn Winter
+アクスタ ブロマイド ステッカー
+
+(譲)
+C賞-2/C賞-4
+D賞-5/D賞佐…","user":{"id":"791457357981110272"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:11:07 UTC 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:11:07 UTC 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:17:39 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 660 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-25 07:17:39 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-25 07:17:39 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.303 seconds (JVM running for 0.839)
+2022-10-25 07:17:39 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-25 07:17:39 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:17:39 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-25 07:17:39 [main] INFO  s.s.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:17:49 Z 2022","id":"1584776219517911041","text":"@egirldannys Nothing beats an autumn night and a warm fire though. And it’s the autumn night that makes the fire so great","user":{"id":"1065324028242595846"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:17:49 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:17:49 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:17:51 Z 2022","id":"1584776230938607616","text":"@ztevetevans I have read abt him earlier. I got the details from this article. But how can someone leap over a 9ft wall?  &amp; so many witnesses at different places testifying.
+I tend to believe, because I hv my own fair share of experiences that defy all logic, but can't be explained away.","user":{"id":"1487732578274938880"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:17:51 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:17:51 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:17:52 Z 2022","id":"1584776232562225153","text":"HIRING FOR JAVA DEVELOPER WITH 5+ YEARS OF EXPERIENCE...
+
+INTERESTED CAN CONTACT US ON BELOW DETAILS.... #hiring #experience #developer #java #CYBERFORDS https://t.co/HhbsIQu6WD","user":{"id":"1581915922499252226"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:17:52 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:17:52 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:17:54 Z 2022","id":"1584776242125246468","text":"@sophiagracedent I was supposed to be at Braves games a lot during summer but too many deaths in my family ate into budget, so far to funerals? The final blow was told the week before they clinched at least WC my hip needed replaced and put on the IL..maybe I need Wash for motivation to Spring T!","user":{"id":"28998171"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:17:54 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:17:54 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:17:55 Z 2022","id":"1584776247560716288","text":"@TNMelissa @Literature_Lady They didn't, even in Spring 2020
+
+https://t.co/Tueui6LsOF","user":{"id":"910885064354955266"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:17:55 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:17:55 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:17:55 Z 2022","id":"1584776248038866944","text":"RT @Changyi_ack: 631 days of Spring Revolution In Myanmar
+#WarCrimesOfJunta
+#2022Oct24Coup
+#WhatsHappeningInMyanmar https://t.co/L9iox6zLAs","user":{"id":"1426880690394595340"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:17:55 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:17:55 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:17:59 Z 2022","id":"1584776261901373440","text":"@PrisonPlanet The thing is that it’s not the eye led closing but dropping. It’s like a spring in a door going out.","user":{"id":"2509177663"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:17:59 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:17:59 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:00 Z 2022","id":"1584776268746477569","text":"RT @bestpattinson: Robert Pattinson for Dior Men Spring 2023 https://t.co/6OH1saVNDr","user":{"id":"1335604157022089216"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:00 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:00 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:01 Z 2022","id":"1584776270939795456","text":"RT @chrliethinker: charlie spring as midnights lyrics; a very important thread https://t.co/3L5H4vOxd7","user":{"id":"1273718844"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:01 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:01 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:02 Z 2022","id":"1584776274102263808","text":"Spring herself, when she woke at dawn,
+Would scarcely know that we were gone.","user":{"id":"1285861512385490944"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:02 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:02 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:02 Z 2022","id":"1584776274853388289","text":"❗ランキング:29位❗(今週の新着)
+
+「■ゴルフグローブ ダブルグリップ メンズ 左手用 ダークグレー×ライム 23cm 5MJML05140」
+メーカ:ミズノ
+
+価格:¥2,027✨
+🔥売り切れ間近🔥(14:18)
+
+https://t.co/rJANnf4ygR","user":{"id":"1358806251077922816"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:02 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:02 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:02 Z 2022","id":"1584776276153225216","text":"❗ランキング：9位❗(CPU)
+
+「■ Ryzen 5 5600G With Wraith Stealth cooler  (6C12T3.9GHz65W)  100-100000252BOX」
+メーカ:AMD
+
+価格:¥39,252✨
+🔥売り切れ間近🔥(14:18)
+
+https://t.co/NYoiaJXptb","user":{"id":"1375961552122044417"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:02 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:02 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:11 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:03 Z 2022","id":"1584776279496093696","text":"♡【Song of Youth】
+Festivals Suit - Nikki's Birthday
+
+From spring to winter, this miraculous land is like a scroll of painting gradually unfolded before Nikki. https://t.co/mkeovpCM1c","user":{"id":"1286039142942380032"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:03 Z 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:03 Z 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:18:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 744 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-25 07:18:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-25 07:18:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.425 seconds (JVM running for 0.661)
+2022-10-25 07:18:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-25 07:18:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:18:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-25 07:18:41 [main] INFO  s.s.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:44 2022","id":"1584776452108685312","text":"RT @social_tsa: Hypernatural naturally comfortable apparel will arrive in the U.S. market in Spring of 2023.
+
+Read More... https://t.co/jZm…","user":{"id":"1090150145218424832"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:44 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:44 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:44 2022","id":"1584776452683227137","text":"Technical Lead (.Net/Java/ Japanese) #Vietnam
+https://t.co/71x4cKczoP","user":{"id":"1194158179887845376"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:44 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:44 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:44 2022","id":"1584776453048389632","text":"Java Programming 1 Study Guide IRW1WKC
+
+https://t.co/92PGAam7z9","user":{"id":"1532545100227567617"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:44 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:44 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:47 2022","id":"1584776462804344832","text":"RT @NSilnitsky: Slides from my @reversim talk: Lessons Learned from 2000 Event Driven Microservices including:
+* The importance of atomic o…","user":{"id":"25262149"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:47 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:47 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:48 2022","id":"1584776467921395712","text":"@CAX117 Always down to grab some old ultis!","user":{"id":"937486857612529665"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:48 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:48 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:48 2022","id":"1584776469850775552","text":"https://t.co/yTIBLhy7rk","user":{"id":"1535637801873571842"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:48 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:48 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:49 2022","id":"1584776474418380800","text":"RT @mauveswanie2: until that warm spring day of 2024 we will wait for you i know you will do well on the next step of your military service…","user":{"id":"1547063832912482305"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:49 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:49 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:50 2022","id":"1584776477429891072","text":"RT @STAND_MARIA: 【本日開催‼️】
+2022.10.25(火)新宿club SCIENCE
+Spring Field×STAND MARIA presents
+〜ハロウィンだしなんか着ナイト2022〜
+
+&lt;出演&gt;
+夢色彩∞アンフィニー
+Treble
+Elber…","user":{"id":"1331576064280207362"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:50 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:50 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:52 2022","id":"1584776486019420160","text":"Carl Dunlop Spring Marlowe Esther Morrison  福州 合肥线下 Edgar Dick  #深圳 #阳春 #平顶山 James House https://t.co/UWPyDb7XnS","user":{"id":"1497471547698778118"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:52 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:52 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:53 2022","id":"1584776489345511425","text":"RT @NirajDa57748986: #NewWayOfLivingOnDiwali
+This Diwali, get the wonderful book that will make your life blessed. And you celebrate Diwali…","user":{"id":"1399620412405731331"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:53 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:53 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:55 2022","id":"1584776496425893888","text":"@PeterCr58710847 @PGDynes …coz you’re all under water.","user":{"id":"1182156290539175936"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:55 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:55 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:55 2022","id":"1584776497847742464","text":"RT @VKazulkin: \"Microservices communication using gRPC Protocol\" https://t.co/lRPL5qCz5T","user":{"id":"216120171"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:55 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:55 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:58 2022","id":"1584776511969628160","text":"Open Joki Tugas Programing/IT
+
+- Python
+- Java
+- Golang
+- Web Development
+- CPP
+
+Bisa untuk Tugas Deadline/Realtime/Project
+
+Berminat atau tanya2? Bisa langsung https://t.co/ZlEErYtpmQ
+
+#jokitugas #jokitugaskuliah #jokiprogramming #zonaba #zonauang #Python #pythonprogramming #CPP","user":{"id":"1479406261691031554"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:58 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:58 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:58 2022","id":"1584776510862303232","text":"RT @sadaboutchiffon: ALEXANDER MCQUEEN SPRING 2023 RTW COLLECTION [1/3]. https://t.co/0Db7lSW0vi","user":{"id":"1191102967837057025"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:58 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:58 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:06 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:18:59 2022","id":"1584776513760546816","text":"Ketahuan Siaran Live, Pengunjung Sidang Bharada E Bakal Diusir https://t.co/jFKayM12Mw","user":{"id":"1442122733886664704"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:18:59 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:18:59 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:00 2022","id":"1584776518043332608","text":"It's gonna be a @micronautfw festival today at @GeeCON Prague! 🚀
+
+10:00 (Room 4) - Micronaut Turbo by @sdelamo 
+13:50 (Room 4) - Slack &amp; Micronaut by @musketyr 
+15:00 (Room 4) - Micronaut's Declarative HTTP client by @wololock 
+
+Can't wait to see you there! 👍 #geecon https://t.co/GuQZmxfnQr","user":{"id":"350165561"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:00 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:00 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:00 2022","id":"1584776518860939264","text":"RT @carlosalmighty: It's 6:19am and the @Yankees have broken my heart yet again. I'll always love you guys though and can't wait for Spring…","user":{"id":"1539283851289186306"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:00 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:00 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:01 2022","id":"1584776524414488576","text":"RT @AA_spring_: #RT #FOLLOW 덕자 10드려요♡.ᐟ
+이유는 기현이가 너무 좋아서。。 https://t.co/C6P9GxFjDZ","user":{"id":"1407928753775280130"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:01 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:01 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:01 2022","id":"1584776524187983873","text":"🔥今夜🔥
+10/25(Tue) 新神楽5F
+俺がイチバン！ / SINKAGURA pre
+
+OPEN/STRAT 17:00
+ADV/DOOR ¥1000/¥1500
+
+DJ’s
+TAIKI(sly cat girl)
+のり(Keyally)
+283(ギークラーケン)
+みゆってぃ(sly cat girl)
+ゆーま(Feed Luck)
+朝戸統至（Spring For Me）
+ガイ(All I Clacks)","user":{"id":"258714487"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:01 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:01 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:02 2022","id":"1584776525878267906","text":"RT @AmberMay2021: @lesstenny A clock I can't be bothered replacing the battery for. A lamp because the kitchen light leaks during rain. A b…","user":{"id":"19911489"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:02 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:02 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:03 2022","id":"1584776530072199168","text":"@ng_java どこまでいくか次第なんすよね…色々の手間とか考えてやってきますわ！","user":{"id":"130012386"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:03 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:03 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:05 2022","id":"1584776538872238080","text":"Draco Racing Dra-C10.3.0.200 Coilover Spring 3.0In Id 10In Tall 200Lb https://t.co/zCIqCghObW eBay","user":{"id":"1511481103898488833"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:05 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:05 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:04 2022","id":"1584776537441595392","text":"@mohikan_893 いやいやいや…
+いくらなんでも無いでしょう（無いでしょう）
+
+人間社会は悪辣なんやで…！","user":{"id":"1044940891616509952"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:04 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:04 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:05 2022","id":"1584776541120012288","text":"RT @rmray: Congratulations @RishiSunak 
+
+In that brief encounter in March at @IMFNews spring meetings, I had hoped he would become @10Downi…","user":{"id":"985825796274049024"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:05 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:05 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:05 2022","id":"1584776540583493632","text":"Spring Step Loafer Women's Fusaro Leather Slip-On Loafer 1/2\" Platform https://t.co/SCQK7iV0y7 eBay https://t.co/HvPYcuIQHJ","user":{"id":"1385312203432026113"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:05 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:05 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:11 2022","id":"1584776565920919552","text":"Vincent Susan Kimberley Waters  #抖音关注 #Instagram账号 Bard Faulkner  北京 济南线下 Truda Susan  #郑州 #丽水 #宜宾 Bert Bradley Spring Harvey https://t.co/aVsFQHVm8T","user":{"id":"801132277027770369"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:11 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:11 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:15 2022","id":"1584776580135415809","text":"RT @pattinsonphotos: Robert Pattinson photographed by Rafael Pavarotti for the new Dior Spring 2023 menswear campaign! https://t.co/lKxDFrR…","user":{"id":"724627234191859712"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:15 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:15 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:15 2022","id":"1584776583385997312","text":"【グッズ予約情報】「あんさんぶるスターズ」の『フィーチャースカウト缶バッジ［2022 SPRING］-Casual Side-』が12月11日発売予定ウナ💖現在店頭予約受付中♪ #あんスタ
+▼バーコード簡単予約がオススメ！
+画像タップ→レジでバーコード表示を見せてね
+https://t.co/2M6rbnfXRf","user":{"id":"385791355"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:15 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:15 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:16 2022","id":"1584776587106750464","text":"@starbuxman Just updating to macOS Ventura on M1, will try then.","user":{"id":"992835230"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:16 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:16 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:19:23 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not create status for text: {"created_at":"Tue Oct 25 05:19:16 2022","id":"1584776588129841152","text":"Looking forward to this!!! https://t.co/qVSCMefxy4","user":{"id":"949297785521737728"}}
+twitter4j.TwitterException: Unexpected date format(Tue Oct 25 05:19:16 2022) returned from twitter.com
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:123)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:109)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:93)
+	at twitter4j.StatusJSONImpl.init(StatusJSONImpl.java:101)
+	at twitter4j.StatusJSONImpl.<init>(StatusJSONImpl.java:90)
+	at twitter4j.TwitterObjectFactory.createStatus(TwitterObjectFactory.java:52)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:84)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+Caused by: java.time.format.DateTimeParseException: Text 'Tue Oct 25 05:19:16 2022' could not be parsed at index 20
+	at java.base/java.time.format.DateTimeFormatter.parseResolved0(DateTimeFormatter.java:2056)
+	at java.base/java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1884)
+	at twitter4j.ParseUtil.getDate(ParseUtil.java:121)
+	... 14 common frames omitted
+2022-10-25 07:25:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 1114 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-25 07:25:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-25 07:25:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.53 seconds (JVM running for 0.761)
+2022-10-25 07:25:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-25 07:25:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:25:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-25 07:25:41 [main] INFO  s.s.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:44.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:44.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:47.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:47.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:49.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:51.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:50.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:51.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:52.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:52.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:54.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:55.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:56.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:02 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:55.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:55.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:56.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:56.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:58.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:58.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:25:59.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:00.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:01.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:01.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:03.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:07.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:08.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:07.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:08.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:09.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)
+2022-10-25 07:26:17 [main] ERROR s.s.t.t.k.s.r.i.TwitterV2StreamClient - Could not parse created_at for tweet: null
+java.text.ParseException: Unparseable date: "2022-10-25T05:26:09.000Z"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getTwitterDate(TwitterV2StreamClient.java:243)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.getFormattedTweet(TwitterV2StreamClient.java:222)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.client.TwitterV2StreamClient.connectStream(TwitterV2StreamClient.java:86)
+	at sk.stasko.twitter.to.kafka.service.runner.impl.TwitterV2KafkaStreamRunner.start(TwitterV2KafkaStreamRunner.java:38)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:37)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:755)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:29)

@@ -1,0 +1,102 @@
+2022-10-22 16:48:48 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 42430 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-22 16:48:48 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-22 16:48:48 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.339 seconds (JVM running for 0.613)
+2022-10-22 16:48:48 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-22 16:48:48 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 16:50:38 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 42534 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-22 16:50:38 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-22 16:50:38 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.271 seconds (JVM running for 0.713)
+2022-10-22 16:50:38 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-22 16:50:38 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 16:50:38 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-22 17:34:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 45226 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-22 17:34:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-22 17:34:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.27 seconds (JVM running for 0.669)
+2022-10-22 17:34:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-22 17:34:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 17:34:41 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-22 17:34:41 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-10-22 17:34:41 [main] INFO  s.s.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering tweets for keywords [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 17:34:41 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - You currently have Essential access which includes access to Twitter API v2 endpoints only. If you need access to this endpoint, you’ll need to apply for Elevated access via the Developer Portal. You can learn more here: https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api#v2-access-leve
+code - 453
+
+2022-10-22 17:34:41 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - You currently have Essential access which includes access to Twitter API v2 endpoints only. If you need access to this endpoint, you’ll need to apply for Elevated access via the Developer Portal. You can learn more here: https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api#v2-access-leve
+code - 453
+
+2022-10-22 17:34:41 [SpringApplicationShutdownHook] INFO  s.s.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
+2022-10-22 17:38:49 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 45448 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-22 17:38:49 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-22 17:38:49 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.321 seconds (JVM running for 0.574)
+2022-10-22 17:38:49 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-22 17:38:49 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 17:38:49 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-22 17:38:49 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-10-22 17:38:49 [main] INFO  s.s.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering tweets for keywords [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 17:38:49 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-10-22 17:38:49 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-10-22 17:38:49 [SpringApplicationShutdownHook] INFO  s.s.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
+2022-10-22 19:47:00 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 48886 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-10-22 19:47:00 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-10-22 19:47:00 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.409 seconds (JVM running for 0.785)
+2022-10-22 19:47:00 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-10-22 19:47:00 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 19:47:00 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-10-22 19:47:00 [Twitter Stream consumer /  [1][initializing]] INFO  twitter4j.TwitterStreamImpl - Establishing connection.
+2022-10-22 19:47:00 [main] INFO  s.s.t.t.k.s.r.i.TwitterKafkaStreamRunner - Started filtering tweets for keywords [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-10-22 19:47:00 [Twitter Stream consumer /  [1][Establishing connection]] INFO  twitter4j.TwitterStreamImpl - 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-10-22 19:47:00 [Twitter Stream consumer /  [1][Establishing connection]] WARN  twitter4j.TwitterStreamImpl - This account is not in required role. 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n<title>Error 403 
+Please use V2 filtered and sample volume stream as alternatives
+</title>
+</head>
+<body>
+<h2>HTTP ERROR: 403</h2>
+<p>Problem accessing '/1.1/statuses/filter.json'. Reason:
+<pre>    
+Please use V2 filtered and sample volume stream as alternatives
+</pre>
+</body>
+</html>
+
+2022-10-22 19:47:00 [SpringApplicationShutdownHook] INFO  s.s.t.t.k.s.r.i.TwitterKafkaStreamRunner - Closing twitter stream!
