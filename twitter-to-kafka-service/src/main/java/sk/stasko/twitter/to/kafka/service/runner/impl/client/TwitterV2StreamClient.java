@@ -76,7 +76,7 @@ public class TwitterV2StreamClient {
             String line = bufferedReader.readLine();
             while (line != null) {
                 line = bufferedReader.readLine();
-                if (!line.isEmpty()) {
+                if (line != null && !line.isEmpty()) {
                     String tweet = getFormattedTweet(line);
                     Status status = null;
                     try {

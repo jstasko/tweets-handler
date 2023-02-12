@@ -6,6 +6,7 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.admin.TopicListing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.retry.RetryContext;
@@ -33,6 +34,7 @@ public class KafkaAdminClient {
 
     private final WebClient webClient;
 
+    @Autowired
     public KafkaAdminClient(KafkaConfigData kafkaConfigData,
                             RetryConfigData retryConfigData,
                             AdminClient adminClient,
@@ -46,7 +48,7 @@ public class KafkaAdminClient {
         this.webClient = webClient;
     }
 
-    public void createTopic() {
+    public void createTopics() {
         CreateTopicsResult createTopicsResult;
         try {
             createTopicsResult = retryTemplate.execute(this::doCreateTopics);
@@ -54,6 +56,7 @@ public class KafkaAdminClient {
             throw new KafkaClientException("Reached max number of retry for creating kafka topic(s) !", t);
         }
         checkTopicsCreated();
+        checkSchemaRegistry();
     }
 
     public void checkTopicsCreated() {
@@ -140,7 +143,8 @@ public class KafkaAdminClient {
         return topics;
     }
 
-    private Collection<TopicListing> doGetTopics(RetryContext retryContext) throws ExecutionException, InterruptedException {
+    private Collection<TopicListing> doGetTopics(RetryContext retryContext)
+            throws ExecutionException, InterruptedException {
         LOG.info("Reading kafka topic {}, attempt {}",
                 kafkaConfigData.getTopicNamesToCreate().toArray(), retryContext.getRetryCount());
         Collection<TopicListing> topicListings = adminClient.listTopics().listings().get();
