@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import sk.stasko.config.TwitterToKafkaConfigData;
+import sk.stasko.twitter.to.kafka.service.init.StreamInitializer;
 import sk.stasko.twitter.to.kafka.service.runner.StreamRunner;
 
 import java.util.Arrays;
@@ -17,14 +18,14 @@ import java.util.Arrays;
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
 
     private final static Logger LOG = LoggerFactory.getLogger(TwitterToKafkaServiceApplication.class);
-    private final TwitterToKafkaConfigData twitterToKafkaConfigData;
     private final StreamRunner streamRunner;
+    private final StreamInitializer streamInitializer;
+
 
     @Autowired
-    public TwitterToKafkaServiceApplication(TwitterToKafkaConfigData twitterToKafkaConfigData,
-                                            StreamRunner streamRunner) {
-        this.twitterToKafkaConfigData = twitterToKafkaConfigData;
+    public TwitterToKafkaServiceApplication(StreamRunner streamRunner, StreamInitializer streamInitializer) {
         this.streamRunner = streamRunner;
+        this.streamInitializer = streamInitializer;
     }
 
     public static void main(String[] args) {
@@ -34,8 +35,7 @@ public class TwitterToKafkaServiceApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         LOG.info("Application started");
-        LOG.info(Arrays.toString(twitterToKafkaConfigData.getTwitterKeywords().toArray()));
-        LOG.info(twitterToKafkaConfigData.getWelcomeMessage());
+        streamInitializer.init();
         streamRunner.start();
     }
 }

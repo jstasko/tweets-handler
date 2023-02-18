@@ -32,6 +32,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>sk.stasko</groupId>
+            <artifactId>kafka-admin</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>sk.stasko</groupId>
+            <artifactId>kafka-producer</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.twitter4j</groupId>
             <artifactId>twitter4j-core</artifactId>
         </dependency>
