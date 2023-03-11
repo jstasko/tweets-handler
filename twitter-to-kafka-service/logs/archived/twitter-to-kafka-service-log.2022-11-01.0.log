@@ -1,0 +1,35 @@
+2022-11-01 19:15:58 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 75549 (/Users/jozef.stasko/Desktop/project/microservices.demo/twitter-to-kafka-service/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2022-11-01 19:15:58 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2022-11-01 19:15:59 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.512 seconds (JVM running for 0.93)
+2022-11-01 19:15:59 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - Application started
+2022-11-01 19:15:59 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-11-01 19:15:59 [main] INFO  s.s.t.t.k.s.TwitterToKafkaServiceApplication - HelloWorld
+2022-11-01 19:15:59 [main] INFO  s.s.t.t.k.s.r.i.TwitterV2KafkaStreamRunner - Created filter for twitter stream for keywords: [Java, Kafka, Microservices, Elasticsearch, Spring]
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @taomyvine: charlie spring was outed in year 9 and that left a BIG impact on him mentally. his true self was revealed to his entire scho…
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text PLEASE have a look at our designs , https://t.co/fD6JU3XUvA and if you like anything you see, click the link in my bio and buy a tee, mug etc to help us out, many thanks x   #lgbt #lgbtiq #lesbian #gay #bisexual #transgender #intersex #queer #allies https://t.co/Ox5CQMYW1p
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Z5 orphanage1 gate. and saw several of the Spring #呻吟 #激情视频 #做爱 #色情 #叫床 #寸止 #黑丝 #御姐  https://t.co/QaqlrtaOzf
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @Patbrdh: I cannot make you understand. I cannot make anyone understand what is happening inside me. I cannot even explain it to myself.…
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @saintdoII: ‘vampire’s kiss’ сut thrоat pearl necklace by hell’s belle designs / christian dior spring 2006 https://t.co/ptBEPSWRK6
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text tori spring is an ebony dark’ness varient i said what i said
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Day 35
+#60daysofJavaDSA 
+#Leetcode  
+#DSA #Java #CodeWeek  #CodeWeek 
+
+https://t.co/C9jZoh8Kmu https://t.co/dvqca0oQVe
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text @LauraPowellEsq Face nappies were not mandatory until the summer of 2020
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "Do you know what it taste like?" The man asked.
+
+"Uh, magnificent?" Yuuji replied.
+
+Blue eyes looked at him with pity. Yuji have a feeling he's mocking him instead though. "It's like you're bathing in a hot spring, relaxing tight muscles after a hard day of work." He explained.
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text "That's a bit too much!?" Yuuji exclaimed, indignantly. 
+
+"Exactly. Let me dumb it down to you. Your food is TERRIBLE ." Is that a smirk he saw!? "And here I thought the boy that the Six Eyes praises to the moon is decent. Turns out he's just another run-of-the-mill cook."
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text Spring Rosa   #杭州   #杭州线下       https://t.co/xzS7TszN8G
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @RafaelFontana: AMAZON, BRAZIL
+
+Thousands of demonstrators in the Amazon city of Belém demand freedom of expression and protest against…
+2022-11-01 19:16:23 [main] INFO  s.s.t.t.k.s.l.TwitterKafkaStatusListener - Twitter status with text RT @UnequalScenes: "The powerful can kill one, two, or 100 roses. But they'll never stop the arrival of spring" - @LulaOficial 
+
+#LulaPresi…

@@ -1,0 +1,361 @@
+2023-02-19 16:17:01 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 16:17:01 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configurationPropertiesBeans' defined in class path resource [org/springframework/cloud/autoconfigure/ConfigurationPropertiesRebinderAutoConfiguration.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.context.properties.ConfigurationPropertiesBeans] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7]
+2023-02-19 16:17:01 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 16:17:01 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configurationPropertiesBeans' defined in class path resource [org/springframework/cloud/autoconfigure/ConfigurationPropertiesRebinderAutoConfiguration.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.context.properties.ConfigurationPropertiesBeans] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.config.server.ConfigServer.main(ConfigServer.java:11)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.context.properties.ConfigurationPropertiesBeans] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:232)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:210)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:149)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 30 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/boot/context/properties/ConfigurationBeanFactoryMetadata
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3434)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2536)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467)
+	... 37 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 41 common frames omitted
+2023-02-19 16:17:01 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configurationPropertiesBeans' defined in class path resource [org/springframework/cloud/autoconfigure/ConfigurationPropertiesRebinderAutoConfiguration.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.context.properties.ConfigurationPropertiesBeans] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:164)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:212)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:117)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:74)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at sk.stasko.config.server.ConfigServer.main(ConfigServer.java:11)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [org.springframework.cloud.context.properties.ConfigurationPropertiesBeans] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@251a69d7]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.buildLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:232)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.findLifecycleMetadata(InitDestroyAnnotationBeanPostProcessor.java:210)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(InitDestroyAnnotationBeanPostProcessor.java:149)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:305)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 30 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/boot/context/properties/ConfigurationBeanFactoryMetadata
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3434)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2536)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467)
+	... 37 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 41 common frames omitted
+2023-02-19 17:28:22 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:28:22 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 65972 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:28:22 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:28:22 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:28:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:28:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:28:22 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:28:22 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:28:23 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:28:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 591 ms
+2023-02-19 17:28:23 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:28:23 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:28:23 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:28:23 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+
+2023-02-19 17:29:32 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 66032 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:29:32 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:29:32 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:29:32 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:29:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:29:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:29:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:29:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:29:32 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:29:32 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 555 ms
+2023-02-19 17:29:32 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:29:32 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:29:32 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:29:32 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+
+2023-02-19 17:30:24 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 66097 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:30:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:30:24 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:30:24 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:30:25 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:30:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:30:25 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:30:25 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:30:25 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:30:25 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 533 ms
+2023-02-19 17:30:25 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:30:25 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:30:25 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:30:25 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+
+2023-02-19 17:31:44 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:31:44 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 66172 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:31:44 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:31:44 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:31:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:31:44 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:31:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:31:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:31:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:31:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 538 ms
+2023-02-19 17:31:45 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:31:45 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:31:45 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:31:45 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+
+2023-02-19 17:35:36 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:35:36 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 66411 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:35:36 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:35:36 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:35:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:35:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:35:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:35:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:35:37 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:35:37 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 592 ms
+2023-02-19 17:35:37 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:35:37 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:35:37 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:35:37 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+
+2023-02-19 17:36:23 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:36:23 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 66481 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:36:23 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:36:23 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:36:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:36:23 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:36:23 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:36:23 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:36:23 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:36:23 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 534 ms
+2023-02-19 17:36:23 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:36:23 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:36:23 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:36:23 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+
+2023-02-19 17:38:03 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:38:03 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 66577 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:38:03 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:38:04 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:38:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:38:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:38:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:38:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:38:04 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:38:04 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 675 ms
+2023-02-19 17:38:04 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:38:04 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:38:04 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:38:04 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+
+2023-02-19 17:38:18 [main] INFO  sk.stasko.config.server.ConfigServer - Starting ConfigServer using Java 18.0.2 on Jozefs-MacBook-Air.local with PID 66607 (/Users/jozef.stasko/Desktop/project/microservices.demo/config-server/target/classes started by jozef.stasko in /Users/jozef.stasko/Desktop/project/microservices.demo)
+2023-02-19 17:38:19 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-19 17:38:19 [main] INFO  sk.stasko.config.server.ConfigServer - No active profile set, falling back to 1 default profile: "default"
+2023-02-19 17:38:19 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=e2051f49-9e73-36ab-85f7-17ee01703047
+2023-02-19 17:38:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-02-19 17:38:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-02-19 17:38:19 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-19 17:38:19 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-02-19 17:38:19 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-02-19 17:38:19 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 584 ms
+2023-02-19 17:38:19 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'defaultEnvironmentRepository' defined in class path resource [org/springframework/cloud/config/server/config/DefaultRepositoryConfiguration.class]: Unsatisfied dependency expressed through method 'defaultEnvironmentRepository' parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'multipleJGitEnvironmentProperties': Could not bind properties to 'MultipleJGitEnvironmentProperties' : prefix=spring.cloud.config.server.git, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties
+2023-02-19 17:38:19 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-02-19 17:38:19 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-02-19 17:38:19 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.cloud.config.server.git' to org.springframework.cloud.config.server.environment.MultipleJGitEnvironmentProperties:
+
+    Reason: java.lang.ClassNotFoundException: com.jcraft.jsch.JSchException
+
+Action:
+
+Update your application's configuration
+

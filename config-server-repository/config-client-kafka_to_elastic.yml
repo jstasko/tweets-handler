@@ -1,0 +1,54 @@
+server:
+  port: 8182
+
+retry-config:
+  initial-interval-ms: 1000
+  max-interval-ms: 10000
+  multiplier: 2.0
+  maxAttempts: 50
+  sleep-time-ms: 2000
+
+kafka-config:
+  bootstrap-server: ${KAFKA-CONFIG_BOOTSTRAP-SERVERS}
+  schema-registry-url-key: schema.registry.url
+  schema-registry-url: ${KAFKA-CONFIG_SCHEMA-REGISTRY-URL}
+  topic-name: ${KAFKA-CONFIG_TOPIC-NAME}
+  topic-names-to-create:
+    - ${KAFKA-CONFIG_TOPIC-NAME}
+  num-of-partitions: 3
+  replication-factor: 3
+
+kafka-consumer-config:
+  # we need to know what is deserializer method for key that what was set in producer
+  key-deserializer: org.apache.kafka.common.serialization.LongDeserializer
+  # we need to know how to deserialize value
+  value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+  # we do not start from beginning each time but offset remain for last item
+  consumer-group-id: twitter-topic-consumer
+  # we say we want to start to read from beginning of partition
+  auto-offset-reset: earliest
+  # we are having avro type as data
+  specific-avro-reader-key: specific.avro.reader
+  # we are having avro type as data
+  specific-avro-reader: true
+  # allows to consume data in batches
+  batch-listener: true
+  # we don't want to start listening on topic right away but rather check if topic is there
+  auto-startup: false
+  # equal to partitions for max concurrency and higher throughput
+  concurrency-level: 3
+  # Specify the amount of time within which the brokers need to get at least one heartbeat signal from consumer
+  # otherwise it will mark consumer as death
+  session-timeout-ms: 10000
+  # frequency of sending heartbeat signal by consumer
+  heartbeat-interval-ms: 3000
+  # Property is for user threads. If message processing logic is too heavy to cause larger than this time
+  # Coordinator explicitly have the consumer leave the group and trigger new round of re-balance
+  max-poll-interval-ms: 300000
+  # maximum fetch records in each poll
+  max-poll-records: 500
+  # maximum bytes to fetch in each poll
+  max-partition-fetch-bytes-default: 1048576
+  max-partition-fetch-bytes-boost-factor: 1
+  # how long we will wait until at least one record is available
+  poll-timeout-ms: 150

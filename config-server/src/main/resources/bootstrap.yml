@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: configserver
+  security:
+    user:
+      name: ${CONFIG_SERVER_USERNAME}
+      password: ${CONFIG_SERVER_PASSWORD}
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jstasko/spring-cloud-config-repository
+          username: jstasko
+          password: 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
+          cloneOnStart: true
+    fail-start: true
