@@ -9,6 +9,7 @@
 		<module>common-config</module>
         <module>config-server</module>
         <module>kafka-to-elastic-service</module>
+        <module>elastic</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -41,6 +42,7 @@
 		<spring-retry.version>1.3.0</spring-retry.version>
 		<kafka-avor-serializer.version>5.5.1</kafka-avor-serializer.version>
 		<spring-cloud-dependencies.version>2021.0.5</spring-cloud-dependencies.version>
+		<elasticsearch.version>7.9.1</elasticsearch.version>
 	</properties>
 	<packaging>pom</packaging>
 
@@ -50,6 +52,21 @@
 			<dependency>
 				<groupId>sk.stasko</groupId>
 				<artifactId>app-config-data</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>sk.stasko</groupId>
+				<artifactId>elastic-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>sk.stasko</groupId>
+				<artifactId>elastic-config</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>sk.stasko</groupId>
+				<artifactId>elastic-index-client</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -92,7 +109,11 @@
 				<artifactId>spring-boot-starter-webflux</artifactId>
 				<version>${spring-boot.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+				<version>${spring-boot.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-test</artifactId>
@@ -141,6 +162,17 @@
 				<version>${spring-cloud-dependencies.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.elasticsearch</groupId>
+				<artifactId>elasticsearch</artifactId>
+				<version>${elasticsearch.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.elasticsearch.client</groupId>
+				<artifactId>elasticsearch-rest-high-level-client</artifactId>
+				<version>${elasticsearch.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.confluent</groupId>

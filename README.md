@@ -19,3 +19,11 @@
 * cd docker-compose 
 * docker-compose -f common.yml -f kafka_cluster.yml -f services.yml up 
 * docker-compose up
+
+
+### ELASTIC
+
+elasticsearch quorum formula :
+* (master_eligible_nodes / 2) + 1
+* always disable swaping
+* docker-compose -f common.yml -f elastic_cluster.yml -f services.yml up
