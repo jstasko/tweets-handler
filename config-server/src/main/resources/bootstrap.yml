@@ -14,6 +14,6 @@ spring:
         git:
           uri: https://github.com/jstasko/spring-cloud-config-repository
           username: jstasko
-          password: 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
+          password: 
           cloneOnStart: true
     fail-start: true
